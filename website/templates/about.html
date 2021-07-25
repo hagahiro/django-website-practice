@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block main %}
+<h1>about</h1>
+<h2>performance</h2>
+<p>I have developped with {{ num_services|intcomma }} services so far.</p>
+<h2>skills</h2>
+<p>
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% empty %}
+    <li>no skills</li>
+    {% endfor %}
+
+</p>
+{% endblock %}
